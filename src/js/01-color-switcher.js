@@ -1,6 +1,3 @@
-<<<<<<< Updated upstream
-
-=======
 const startButton = document.querySelector('[data-start]')
 const stopButton = document.querySelector('[data-stop]')
 
@@ -26,4 +23,3 @@ startButton.addEventListener('click', function() {
   website.appendChild(startButton)
   website.appendChild(stopButton)
 document.body.insertBefore(website, document.body.secondChild)
->>>>>>> Stashed changes
