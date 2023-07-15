@@ -16,3 +16,16 @@ img {
   display: block;
   max-width: 100%;
 }
+.timer--row {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.value {
+  font-size: larger;
+  font-weight: 600;
+}
+.label {
+  color: darkgray;
+}
