@@ -37,11 +37,12 @@ function countDown() {
     clearInterval(intervalId);
     return;
   }
+
   const { days, hours, minutes, seconds } = convertMs(diff);
-  daysValue.textContent = days;
-  hoursValue.textContent = hours;
-  minutesValue.textContent = minutes;
-  secondsValue.textContent = seconds;
+  daysValue.textContent = addLeadingZero(days);
+  hoursValue.textContent = addLeadingZero(hours);
+  minutesValue.textContent = addLeadingZero(minutes);
+  secondsValue.textContent = addLeadingZero(seconds);
 }
 
 let intervalId;
@@ -60,4 +61,14 @@ function convertMs(ms) {
   const seconds = Math.floor((((ms % day) % hour) % minute) / second);
 
   return { days, hours, minutes, seconds };
+}
+
+// function addLeadingZero (value) {
+//   return value.padStart(2, '0');
+
+function addLeadingZero(value) {
+  if (Number.isInteger(value)) {
+    return String(value).padStart(2, '0');
+  }
+  return value;
 }
